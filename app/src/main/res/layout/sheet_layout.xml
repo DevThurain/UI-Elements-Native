@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    style="@style/Widget.Material3.BottomSheet"
+    app:behavior_hideable = "false"
+    app:behavior_peekHeight = "60dp"
+    >
+
+    <TextView
+        android:id="@+id/lblPadc"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Bottom Sheet"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="#3F51B5"
+        android:letterSpacing="0.2"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/lblPadc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/merry_jane"
+        />
+</RelativeLayout>

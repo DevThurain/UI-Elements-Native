@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.thurainx.commonui">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CommonUi.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".services_test.ServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewpager_with_custom_adapter.ViewPagerCustomAdapterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recycler_view.RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".constraint_layout.ConstraintLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".drawer_layout.DrawerLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".coordinator_layout.CoordinatorLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".collapsing_tool_bar.CollapsingToolBarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".material_components.MaterialComponentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bottom_sheet.BottomSheetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bottom_appbar.BottomAppBarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bottom_navigation.BottomNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bottom_navigation_with_viewpager.BottomNavigationWithViewPagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <service android:name=".services_test.services.ForegroundService"
+            android:exported="false" />
+
+        <service android:name=".services_test.intent_services.DownloadIntentService"
+            android:exported="false" />
+
+        <service android:name=".services_test.job_intent_service.DownloadJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false" />
+    </application>
+
+</manifest>
